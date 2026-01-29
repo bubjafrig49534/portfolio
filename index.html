@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Hummel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #37352f;
+            background: #ffffff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        .page-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
+        }
+
+        .page-title a {
+            color: #37352f;
+            text-decoration: none;
+        }
+
+        .page-title a:hover {
+            color: #2383e2;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-desc {
+            color: #787774;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .callout {
+            background: #f1f1ef;
+            border-radius: 4px;
+            padding: 20px 20px 16px;
+            margin-bottom: 12px;
+        }
+
+        .callout h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .callout p {
+            font-size: 15px;
+            color: #37352f;
+            margin-bottom: 8px;
+        }
+
+        .callout ul {
+            font-size: 15px;
+            padding-left: 24px;
+            margin-bottom: 8px;
+        }
+
+        .callout li {
+            margin-bottom: 2px;
+        }
+
+        .callout .label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #787774;
+            margin-bottom: 2px;
+        }
+
+        .callout .meta {
+            font-size: 14px;
+            color: #787774;
+            margin-bottom: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #37352f;
+            background: #ffffff;
+            border: 1px solid #e3e2e0;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .btn:hover {
+            background: #f7f6f3;
+        }
+
+        blockquote {
+            border-left: 3px solid #e3e2e0;
+            padding: 4px 0 4px 16px;
+            margin: 12px 0;
+            font-size: 15px;
+            color: #37352f;
+        }
+
+        blockquote strong {
+            font-weight: 600;
+        }
+
+        .highlight {
+            background: #fdecc8;
+            padding: 1px 4px;
+            border-radius: 2px;
+        }
+
+        .testimonial-author {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 4px;
+        }
+
+        .footer {
+            margin-top: 48px;
+        }
+
+        .footer h1 {
+            margin-bottom: 12px;
+        }
+
+        .footer ul {
+            list-style: none;
+            font-size: 16px;
+        }
+
+        .footer li {
+            margin-bottom: 6px;
+        }
+
+        .footer a {
+            color: #37352f;
+            text-decoration: underline;
+            text-decoration-color: #c4c4c1;
+            text-underline-offset: 3px;
+        }
+
+        .footer a:hover {
+            text-decoration-color: #37352f;
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 48px 16px 80px;
+            }
+            .page-title {
+                font-size: 32px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="page-title"><a href="http://marchummel.com">Marc Hummel</a></div>
+
+        <!-- Marketing Ops -->
+        <h1>Marketing Ops</h1>
+        <div class="callout">
+            <h2>Email list cleanser</h2>
+            <p>Before you upload contacts to Marketing Cloud Account Engagement (MCAE), you need to know your data is clean. Invalid emails break automations. Field length violations cause import failures. Duplicate records waste budget.</p>
+            <p>This tool validates everything before import&mdash;email format, field limits, data quality, duplicates, and more&mdash;and processes everything right in your browser.</p>
+            <p>Best of all, your contact data never leaves your computer. Fix issues with inline editing, apply bulk corrections, and export clean lists ready for MCAE.</p>
+            <a href="email-cleanser.html" class="btn">View project &rarr;</a>
+        </div>
+
+        <!-- Side Projects -->
+        <h1>Side projects</h1>
+        <p class="section-desc">Fun things.</p>
+
+        <div class="callout">
+            <h2>Hummelify</h2>
+            <p>Interactive website I built using Claude Code. Upload a selfie and it removes the background, creates an AI version of your face in the likeness of a Hummel figurine, and emails it to you.</p>
+            <p>I made this as a proof of concept for creating beautiful Typeform-esque forms using AI tools.</p>
+            <a href="hummelify.html" class="btn">View project &rarr;</a>
+        </div>
+
+        <div class="callout">
+            <h2>iOS Shortcuts</h2>
+            <p>I use the Apple Shortcuts app to make my life easier. I run them on my HomePod, Apple Watch, and iPhone. These examples show my innate sense of &ldquo;curiosity, tinkering and hacking&rdquo;&mdash;and they are cool.</p>
+            <a href="ios-shortcuts.html" class="btn">View project &rarr;</a>
+        </div>
+
+        <!-- Content Marketing -->
+        <h1>Content marketing</h1>
+        <p class="section-desc">Research, case studies, ebooks, more.</p>
+
+        <div class="callout">
+            <h2>Business report</h2>
+            <p class="meta">Company: CardFlight</p>
+            <p>The CardFlight Small Business Report was a long-running report featuring first-party analysis of our 125,000+ strong merchant portfolio. Created for brand awareness during the start of the COVID-19 pandemic.</p>
+            <p class="label">My roles:</p>
+            <ul>
+                <li>Analyze data to find the hook</li>
+                <li>Work with the BizOps to identify trends and create each report&rsquo;s narrative</li>
+                <li>Write each report</li>
+                <li>Manage the custom CMS for this report</li>
+                <li>Contribute to PR strategy (managed by Marketing VP)</li>
+            </ul>
+            <a href="business-report.html" class="btn">View project &rarr;</a>
+        </div>
+
+        <div class="callout">
+            <h2>Case study</h2>
+            <p class="meta">Company: YouVisit</p>
+            <p>YouVisit is a B2B Virtual Reality company, with a focus on education, travel, and recruiting verticals. This case study highlights the recruiting efforts of Pilot Flying J, a chain of full-service truck stops, to use VR to attract and educate top talent.</p>
+            <p class="label">My roles:</p>
+            <ul>
+                <li>Writing &amp; content strategy</li>
+                <li>Interviewing</li>
+                <li>Design direction</li>
+            </ul>
+            <a href="case-study.html" class="btn">View project &rarr;</a>
+        </div>
+
+        <div class="callout">
+            <h2>Ebook</h2>
+            <p class="meta">Company: Thrive Talent Relationship Management tool (freelance)</p>
+            <p>Bottom-funnel ebook designed to educate executive recruiting professionals about the key points that Thrive TRM addresses with its software.</p>
+            <p class="label">My roles:</p>
+            <ul>
+                <li>Researching the executive recruiting industry</li>
+                <li>Creating a compelling narrative outline and writing the ebook</li>
+                <li>Contributing to design direction</li>
+            </ul>
+            <a href="ebook.html" class="btn">View project &rarr;</a>
+        </div>
+
+        <!-- Even Older Stuff -->
+        <h1>Even older stuff</h1>
+
+        <div class="callout">
+            <h2>Do ideas really spread like viruses?</h2>
+            <p>This is the capstone project I made for my Master&rsquo;s degree at University of Pennsylvania. I interviewed a bunch of people and made an interactive website for it.</p>
+            <p>Some of it is broken now. Check it out anyway?</p>
+            <a href="penn-capstone.html" class="btn">View project &rarr;</a>
+        </div>
+
+        <div class="callout">
+            <h2>bminus</h2>
+            <p>bminus was a bicycle apparel company founded by a friend and I in 2004, with a simple idea: a t-shirt with two people on a tandem above the words &ldquo;bicycles are for lovers.&rdquo; Hundreds of t-shirts later, bminus mailed its last hand-packed parcel in 2011.</p>
+            <p>Reminisce with us, won&rsquo;t you?</p>
+            <a href="bminus.html" class="btn">View project &rarr;</a>
+        </div>
+
+        <!-- Testimonials -->
+        <h1>Testimonials</h1>
+
+        <h3 class="testimonial-author">Neha Patel, VP of Finance, CardFlight</h3>
+        <blockquote>
+            I worked with Marc at CardFlight and always appreciated how <strong>easy he was to partner with</strong>. He has a great balance of creativity and practicality, and he <strong>consistently found ways to move projects forward</strong> in a way that actually worked for the business and the team.<br><br>
+            Marc is also an excellent communicator. He had a <strong>real knack for putting complex ideas into clear, straightforward updates</strong> for a group like Finance, which made decision-making faster and smoother for everyone. On top of that, he was always willing to roll up his sleeves and help out&mdash;even with projects that were a little undefined or outside of his &ldquo;official&rdquo; scope. <strong>You could always count on him to step in, bring structure, and get things done</strong>.<br><br>
+            He&rsquo;s the kind of teammate who makes work both more effective and more enjoyable. Any team would be lucky to have him.
+        </blockquote>
+
+        <h3 class="testimonial-author">Janet Frasier, Head of Marketing, CardFlight</h3>
+        <p class="meta">2022 performance review</p>
+        <blockquote>
+            Marc&rsquo;s <span class="highlight">tinkerer mindset</span> was also demonstrated through the curiosity and seeking for solutions in every approach to the PayFac business. He got an early start to scoping a persistent marketing identifier and helping us identify the type of professional assistance we will need for acquisition.
+        </blockquote>
+
+        <!-- Footer / Contact -->
+        <div class="footer">
+            <h1>Thanks for visiting.</h1>
+            <p>Here are some other things you can do.</p>
+            <ul>
+                <li><a href="http://marchummel.com">Go back to my homepage</a></li>
+                <li>Call or text me: 267-987-0569</li>
+                <li><a href="mailto:marc@marchummel.com">Email me</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
