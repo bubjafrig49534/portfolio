@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Shortcuts — Marc Hummel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #37352f;
+            background: #ffffff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #787774;
+            margin-bottom: 32px;
+        }
+
+        .breadcrumb a {
+            color: #787774;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #37352f;
+        }
+
+        .page-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .page-intro {
+            font-size: 16px;
+            color: #37352f;
+            margin-bottom: 48px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e3e2e0;
+            margin: 40px 0;
+        }
+
+        .shortcut {
+            margin-bottom: 48px;
+        }
+
+        .shortcut h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        .shortcut-section {
+            margin-bottom: 16px;
+        }
+
+        .shortcut-section .label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #787774;
+            margin-bottom: 4px;
+        }
+
+        .shortcut-section p {
+            font-size: 15px;
+        }
+
+        .shortcut img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin: 12px 0;
+            border: 1px solid #e3e2e0;
+        }
+
+        .callout {
+            background: #f1f1ef;
+            border-radius: 4px;
+            padding: 16px 20px;
+            font-size: 15px;
+            margin: 16px 0;
+        }
+
+        ol, ul {
+            padding-left: 24px;
+            font-size: 15px;
+            margin: 8px 0;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        pre {
+            background: #f7f6f3;
+            border: 1px solid #e3e2e0;
+            border-radius: 4px;
+            padding: 12px 16px;
+            font-size: 13px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            margin: 8px 0;
+            overflow-x: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 6px 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #37352f;
+            background: #ffffff;
+            border: 1px solid #e3e2e0;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.15s;
+        }
+
+        .btn:hover {
+            background: #f7f6f3;
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 48px 16px 80px;
+            }
+            .page-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="breadcrumb"><a href="index.html">&larr; Marc Hummel</a></div>
+
+        <div class="page-title">iOS Shortcuts</div>
+        <p class="page-intro">I use the Apple Shortcuts app to make my life easier. I run them on my HomePod, Apple Watch, and iPhone. These examples show my innate sense of &ldquo;curiosity, tinkering and hacking&rdquo;&mdash;and they are cool.</p>
+
+        <hr>
+
+        <!-- Shortcut 1 -->
+        <div class="shortcut">
+            <h2>1. Talk to Claude instead of Siri</h2>
+            <div class="shortcut-section">
+                <div class="label">Use case</div>
+                <p>HomePods sound amazing. The original pair I bought in 2018 still work great. However, Siri is not a good voice assistant.</p>
+            </div>
+            <div class="shortcut-section">
+                <div class="label">Solution</div>
+                <p>I created a Shortcut so I can talk to Claude. I can yell into the air at home (or say to my Apple Watch, <em>Hey Siri, Ask Claude</em>), and it will connect to the Claude API and tell me the answer.</p>
+                <p>Here&rsquo;s the setup:</p>
+            </div>
+            <div class="shortcut-section">
+                <div class="label">API request headers</div>
+                <pre>anthropic-version  2023-06-01
+content-type       application/json
+x-api-key          [my Claude api key]</pre>
+            </div>
+            <div class="shortcut-section">
+                <div class="label">Body</div>
+                <pre>messages     [the input]
+model        claude-3-haiku-20240307
+max_tokens   255
+temperature  0.1
+system       You are a voice assistant. Give brief, direct answers.</pre>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Shortcut 2 -->
+        <div class="shortcut">
+            <h2>2. How much coffee do I need?</h2>
+            <div class="shortcut-section">
+                <div class="label">Use case</div>
+                <p>I try to make the best coffee possible at home. I carefully weigh the beans and water every night according to my preferred ratio so it&rsquo;s ready to go in the morning. But at the end of the coffee bag, there&rsquo;s always a little bit left over. I don&rsquo;t want to waste the coffee or mix it with coffee from a different bag.</p>
+            </div>
+            <div class="shortcut-section">
+                <div class="label">Solution</div>
+                <p>I made a Shortcut that asks how much coffee I have left in the bag and tells me the weight of water I need to prepare (in grams). I run this on my Apple Watch when I&rsquo;m in the kitchen.</p>
+            </div>
+            <div class="callout">
+                Note: I set the ratio as a variable so I can easily update the Shortcut if I ever decide to change my ratio. An example of how: 1) I always have an eye toward scalability and 2) I try to create clean setups.
+            </div>
+            <a href="https://www.icloud.com/shortcuts/dbcb3dc7c7ba44d1a33b5e857e8d2a90" class="btn" target="_blank">Download this Shortcut &rarr;</a>
+        </div>
+
+        <hr>
+
+        <!-- Shortcut 3 -->
+        <div class="shortcut">
+            <h2>3. Is it hoodie weather?</h2>
+            <div class="shortcut-section">
+                <div class="label">Use case</div>
+                <p>This might be my favorite, most-used Shortcut ever. When I&rsquo;m heading outside for a walk or a bike ride, I don&rsquo;t really want to know the temperature; I want to know what I should wear.</p>
+            </div>
+            <div class="shortcut-section">
+                <div class="label">Solution</div>
+                <p>First, we get the current weather conditions. We use <em>Feels Like</em> over <em>Temperature</em> since we want a consistent recommendation with regards to what to wear.</p>
+                <p>Then a series of IF statements tell me what to wear based on the Feels Like temperature. There are 6 possible outcomes:</p>
+                <ol>
+                    <li><strong>Very cold (&lt;30&deg;):</strong> Wear a hoodie and jacket and hat and mittens.</li>
+                    <li><strong>Cold (30&ndash;42&deg;):</strong> No, it&rsquo;s a bit colder than that. Wear a jacket and hat and gloves.</li>
+                    <li><strong>Probably hoodie weather (43&ndash;49&deg;):</strong> Yes, and maybe more.</li>
+                    <li><strong>Hoodie weather (49&ndash;68&deg;):</strong> Yes, wear a hoodie&mdash;unless it&rsquo;s sunny, then you might not need one.</li>
+                    <li><strong>T-shirt weather (68&ndash;80&deg;):</strong> No. Just a T-shirt will do.</li>
+                    <li><strong>Hot (&gt;80&deg;):</strong> Nah. I recommend a T-shirt and shorts. It&rsquo;s blazin&rsquo; hot out there, man. <em>(Style note: I do not often take its advice with regards to wearing shorts.)</em></li>
+                </ol>
+                <p>We also check for rain probability and wind speed and append those to the end of the recommendation.</p>
+            </div>
+            <a href="https://www.icloud.com/shortcuts/7fbeab2342414ba4ad4631c05aeca95d" class="btn" target="_blank">Download this Shortcut &rarr;</a>
+        </div>
+
+    </div>
+</body>
+</html>
