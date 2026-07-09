@@ -116,6 +116,25 @@
             background: #f7f6f3;
         }
 
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-top: 12px;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         blockquote {
             border-left: 3px solid #e3e2e0;
             padding: 4px 0 4px 16px;
@@ -186,30 +205,30 @@
     <div class="page">
         <div class="page-title"><a href="http://marchummel.com">Marc Hummel</a></div>
 
-        <!-- Marketing Ops -->
-        <h1>Marketing Ops</h1>
+        <!-- Marketing Automation -->
+        <h1>Marketing Automation</h1>
+
         <div class="callout">
-            <h2>Email list cleanser</h2>
-            <p>Before you upload contacts to Marketing Cloud Account Engagement (MCAE), you need to know your data is clean. Invalid emails break automations. Field length violations cause import failures. Duplicate records waste budget.</p>
-            <p>This tool validates everything before import&mdash;email format, field limits, data quality, duplicates, and more&mdash;and processes everything right in your browser.</p>
-            <p>Best of all, your contact data never leaves your computer. Fix issues with inline editing, apply bulk corrections, and export clean lists ready for MCAE.</p>
-            <a href="https://bubjafrig49534.github.io/landing/index.html" class="btn">View project &rarr;</a>
+            <h2>n8n workflow</h2>
+            <p>This workflow fetches plain text of a company&rsquo;s homepage, hands off to Claude to write a cold email, and places the draft in the draft folder of the rep&rsquo;s Gmail.</p>
+            <div class="video-embed">
+                <iframe src="https://www.loom.com/embed/16f6e1ac1d4f4f7a9f8901bd42eb870e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
         </div>
 
-        <!-- Side Projects -->
-        <h1>Side projects</h1>
-
         <div class="callout">
-            <h2>Hummelify</h2>
+            <h2>Claude Code Typeform replacement</h2>
             <p>Interactive website I built using Claude Code. Upload a selfie and it removes the background, creates an AI version of your face in the likeness of a Hummel figurine, and emails it to you.</p>
             <p>I made this as a proof of concept for creating beautiful Typeform-esque forms using AI tools.</p>
             <a href="https://hummel.vercel.app" class="btn">Launch Hummelify &rarr;</a>
         </div>
 
         <div class="callout">
-            <h2>iOS Shortcuts</h2>
-            <p>I use the Apple Shortcuts app to make my life easier. I run them on my HomePod, Apple Watch, and iPhone. These examples show my innate sense of &ldquo;curiosity, tinkering and hacking&rdquo;&mdash;and they are cool.</p>
-            <a href="ios-shortcuts.html" class="btn">View shortcuts &rarr;</a>
+            <h2>Email list cleanser</h2>
+            <p>Before you upload contacts to Marketing Cloud Account Engagement (MCAE), you need to know your data is clean. Invalid emails break automations. Field length violations cause import failures. Duplicate records waste budget.</p>
+            <p>This tool validates everything before import&mdash;email format, field limits, data quality, duplicates, and more&mdash;and processes everything right in your browser.</p>
+            <p>Best of all, your contact data never leaves your computer. Fix issues with inline editing, apply bulk corrections, and export clean lists ready for MCAE.</p>
+            <a href="https://bubjafrig49534.github.io/landing/index.html" class="btn">View project &rarr;</a>
         </div>
 
         <!-- Content Marketing -->
@@ -256,8 +275,14 @@
             <a href="https://drive.google.com/file/d/16VETLp9Ov_ozr0o2NqKUQnDi_s1JuzzB/view" class="btn" target="_blank">Download PDF &rarr;</a>
         </div>
 
-        <!-- Even Older Stuff -->
-        <h1>Even older stuff</h1>
+        <!-- Misc. curiosities -->
+        <h1>Misc. curiosities</h1>
+
+        <div class="callout">
+            <h2>iOS Shortcuts</h2>
+            <p>I use the Apple Shortcuts app to make my life easier. I run them on my HomePod, Apple Watch, and iPhone. These examples show my innate sense of &ldquo;curiosity, tinkering and hacking&rdquo;&mdash;and they are cool.</p>
+            <a href="ios-shortcuts.html" class="btn">View shortcuts &rarr;</a>
+        </div>
 
         <div class="callout">
             <h2>Do ideas really spread like viruses?</h2>
